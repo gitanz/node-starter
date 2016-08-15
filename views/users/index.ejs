@@ -1,0 +1,87 @@
+<% include ../shared/header %>
+
+<div class="maincontent">
+    <div class="contentinner content-dashboard">
+
+
+        <div id="MessageBox">
+            <!--Confirmation message here-->
+
+        </div>
+
+
+
+        <div class="row-fluid">
+            <div class="maincontent">
+                <div class="contentinner">
+                    <div class="row-fluid">
+                        <div class="clearfix"></div>
+
+                        <div class="content-wrapper">
+                            <div class="overview-head">
+                                <div class="pull-right">
+                                    <button type="button" class="btn btn-success"
+                                            onclick='showAddNewForm("Add New User","/Admin/UserManagement/Form",400,450)'>
+                                        <small class="glyphicon glyphicon-plus-sign"></small>
+                                        Add New User
+                                    </button>
+                                </div>
+                                <div class="clearfix"></div>
+                            </div>
+                            <table id="user-list" class="table table-bordered">
+                                <thead>
+                                <tr>
+                                    <th><a class="table-header" field-name="DateCreated">Date</a>
+                                    </th>
+                                    <th><a class="table-header"
+                                           field-name="Username">Username</a>
+                                    </th>
+                                    <th><a class="table-header" field-name="Email">Email</a></th>
+                                    <th><a class="table-header" field-name="Name">Name</a></th>
+                                    <th><a class="table-header"
+                                           field-name="UserTypeShow">Role</a>
+                                    </th>
+                                    <th>Action</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                </tbody>
+                            </table>
+                            <div id="loading-msg-user" class="loading-image"></div>
+                            <div class="clearfix"></div>
+                            <h3>
+                                User Actions
+                            </h3>
+
+                            <table class="table table-bordered dyntable" id="user-log-list">
+                                <thead>
+                                <tr>
+
+                                    <th><a class="table-header"
+                                           field-name="Username">Username</a>
+                                    </th>
+                                    <th><a class="table-header"
+                                           field-name="Datetime">DateTime</a>
+                                    </th>
+                                    <th><a class="table-header"
+                                           field-name="Action">User Actions</a>
+                                    </th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                </tbody>
+                            </table>
+                            <div id="loading-msg-user-log" class="loading-image"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!--row-fluid-->
+    </div>
+    <!--contentinner-->
+</div>
+<!--maincontent-->
+<% include ../shared/footer %>
+

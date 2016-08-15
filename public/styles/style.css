@@ -1,0 +1,920 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+    font-family: Calibri;
+}
+
+.login-container {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 630px;
+    border: 1px solid #999;
+    border-radius: 21px;
+    box-shadow: 0px 1px 34px #999;
+    padding: 30px;
+    overflow: hidden;
+    margin: auto;
+    height: 370px;
+}
+
+#login-logo {
+    width: 272px;
+    float: left;
+    margin-top: 37px;
+}
+
+#login-logo img {
+    margin-top: 21px;
+    margin-left: 54px;
+}
+
+#login-form {
+    float: left;
+    border-left: 1px dashed #CCC;
+    padding-left: 70px;
+    margin-top: 12px;
+}
+
+#login-form h2 {
+    margin-bottom: 26px;
+}
+
+.login-field {
+    margin-bottom: 20px;
+}
+
+.login-field label {
+    display: inline-block;
+    min-width: 66px;
+}
+
+.login-field span {
+    width: 70px;
+    display: inline-block;
+    margin-right: 30px;
+}
+
+.login-field input[type="text"], .login-field input[type="password"] {
+    border: 1px solid #CCC;
+    height: 20px;
+    width: 180px;
+}
+
+#body-container {
+    width: 1381px;
+    margin: auto;
+    min-height: 400px;
+}
+
+#header-container {
+    width: 1381px;
+    margin: auto;
+    margin-top: 10px;
+}
+
+#logo-part {
+    float: left;
+}
+
+#beep-call {
+    font-family: Calibri;
+    font-size: 24px;
+    font-weight: 700;
+    margin-left: 55px;
+    letter-spacing: 5px;
+    margin-top: 0px;
+}
+
+#MenuContainer {
+    margin-top: 10px;
+}
+
+#menu ul {
+    margin-top: 1px;
+    margin-left: -1px;
+}
+
+#menu ul li {
+    list-style: none;
+    min-width: 140px;
+    border: 1px solid #FFF;
+    cursor: pointer;
+    background-color: #009DCA;
+    background-repeat: repeat-x;
+    background-size: 1px 71px;
+    text-shadow: 0.1em 0.1em 0.2em #000;
+    font-size: 18px;
+    font-family: Calibri;
+}
+
+#menu ul li a {
+    text-decoration: none;
+    color: #FFF;
+    display: block;
+    vertical-align: middle;
+}
+
+#menu ul li:hover {
+    background-color: rgb(69, 138, 168);
+    background-repeat: repeat-x;
+}
+
+#menu ul li.active a {
+    color: #fff;
+}
+
+#menu ul li.active {
+    background-color: rgb(69, 138, 168);
+}
+
+.pager {
+    background-color: whitesmoke;
+    border: 1px solid rgb(49, 116, 146);
+    border-top: none;
+}
+
+.pager a {
+    margin: 5px;
+    cursor: pointer;
+    height: 2em;
+    font-size: 15px;
+    text-decoration: none;
+    line-height: 2em;
+    padding: 0px 6px;
+    border: 1px solid #000;
+    background: #FFFFFF;
+    color: #000;
+}
+
+.pager a.active-page {
+    background: #CECECE;
+}
+
+#user-operations {
+    float: right;
+    margin-bottom: 10px;
+}
+
+input[type="submit"], input[type="button"], button {
+    padding: 5px 20px;
+    background: rgb(16, 127, 177);
+    cursor: pointer;
+    border: 1px solid #000;
+    text-shadow: 0.1em 0.1em 0.2em #000;
+    color: #FFF;
+    font-weight: bold;
+    background-size: 1px 30px;
+    border-radius: 2px;
+    box-shadow: 2px 2px 5px #000;
+    font-size: 14px
+}
+
+input[type="submit"]:hover, input[type="button"]:hover {
+    background: rgb(49, 116, 146);
+}
+
+.add-new-item input {
+    float: right;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    margin-top: 15px;
+}
+
+.interface-body-container {
+    margin-bottom: 10px;
+}
+
+.interface-body-container table:not(.exclude-interface-table) {
+    width: 100%;
+    margin-top: 10px;
+    border-collapse: collapse;
+}
+
+.interface-body-container table:not(.exclude-interface-table) tbody tr:nth-child(odd) {
+    background-color: #F5F7F6;
+    font-size: 15px;
+    font-family: Calibri;
+}
+
+.interface-body-container h2 {
+    margin-bottom: 10px;
+    padding: 0 0 2px 0;
+    border-bottom: 2px solid #A07070;
+}
+
+.interface-body-container table:not(.exclude-interface-table) thead tr {
+    background-color: rgb(35, 154, 207);
+    color: #FFF;
+    font-size: 15px;
+    font-family: Calibri;
+    text-shadow: 0.1em 0.1em 0.2em #000;
+}
+
+.interface-body-container table:not(.exclude-interface-table) thead th, .interface-body-container table:not(.exclude-interface-table) tbody td,
+.interface-body-container table:not(.exclude-interface-table) tfoot td {
+    padding: 4px;
+    border: solid 1px rgb(49, 116, 146);
+    font-size: 15px;
+    font-family: Calibri;
+}
+
+.interface-body-container table:not(.exclude-interface-table) tbody th a {
+    color: #000;
+}
+
+.interface-body-container table:not(.exclude-interface-table) a:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.interface-body-container table:not(.exclude-interface-table) td a {
+    color: blue;
+}
+
+.interface-body-container table:not(.exclude-interface-table) tfoot {
+    background: rgb(175, 247, 175);
+}
+
+.hide {
+    display: none;
+}
+
+.form-field {
+    margin: 10px;
+    display: table;
+}
+
+.form-field label {
+    display: inline-block;
+    width: 150px;
+}
+
+.form-field input {
+}
+
+.form-field-button {
+    float: right;
+    margin-right: 11px;
+    margin-top: 5px;
+}
+
+.add-new-campaign input {
+    float: left;
+    margin-bottom: 10px;
+    margin-top: 1px;
+}
+
+.errorMessage {
+    color: red;
+    margin-top: 5px;
+}
+
+.campaign-description {
+    margin-top: 10px;
+}
+
+.campaign-description-section {
+    float: left;
+    width: 100%;
+}
+
+.campaign-description-field {
+    line-height: 20px;
+}
+
+.campaign-description-field-label {
+    font-weight: bold;
+}
+
+.campaign-operation {
+    float: right;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+#edit-campaign {
+    float: right;
+}
+
+.error-message, .success-message {
+    margin: 0px 0px 10px 2px;
+    padding: 10px;
+    padding-left: 32px;
+}
+
+.error-message {
+    background-color: #FFBABA;
+    background-image: url(../images/error.png);
+    background-repeat: no-repeat;
+    background-position: 10px center;
+    border: 1px solid red;
+}
+
+.success-message {
+    background-color: #DFF2BF;
+    background-image: url('../images/success.png');
+    background-repeat: no-repeat;
+    background-position: 10px center;
+    border: 1px solid green;
+    background-size: 16px 16px;
+}
+
+input.link-button {
+    border: none;
+    background: none;
+    box-shadow: none;
+    padding: 0;
+    text-shadow: none;
+    color: blue;
+    font-weight: normal;
+    font-family: Calibri;
+    font-size: 15px;
+}
+
+input[type="submit"][disabled]:hover {
+    text-decoration: none;
+
+}
+
+input.link-button:hover {
+    background: none;
+    text-decoration: underline;
+}
+
+input.link-button:focus {
+    outline: none;
+}
+
+.datetime-picker-button {
+    float: right;
+    margin: 6px 4px 6px 0;
+}
+
+.campaignText {
+    border: 1px solid #B4AEAE;
+    width: 250px;
+    display: inline-block;
+    height: 22px;
+    padding: 2px 0px 2px 5px;
+    color: #000;
+}
+
+.validationError {
+    position: absolute;
+    background-color: #F09F9F;
+    padding: 2px 10px;
+    border: 1px solid #000;
+    box-shadow: 1px 1px 7px #551818;
+    white-space: nowrap;
+    display: inline-block;
+    border: 1px solid #141414;
+    text-align: center;
+    z-index: 100;
+}
+
+.validationLine {
+    height: 1px;
+    background: #000;
+    width: 70px;
+    position: absolute;
+    z-index: 9999;
+}
+
+.dashBoardStartButton {
+    margin-top: 10px;
+}
+
+.loading-image {
+    margin-top: 10px;
+    opacity: 0.60;
+    -moz-opacity: 0.45;
+    filter: alpha(opacity=45);
+    background-image: url('../images/ajax-loader-bar.gif');
+    background-repeat: no-repeat;
+    height: 20px;
+    width: 50px;
+    z-index: 10;
+}
+
+.loading{
+    background-image: url('../images/loaders/loader8.gif');
+}
+
+.reportExportButtonForm {
+    float: right;
+    margin-bottom: 15px;
+}
+
+#gauges {
+    margin-left: 18px;
+}
+
+.gauge {
+    width: 394px;
+    float: left;
+    margin-right: 80px;
+    height: 200px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+}
+
+.pie-chart {
+    display: table-cell;
+
+}
+
+.gauge:last-child {
+    margin-right: 0;
+}
+
+.gauge-title {
+    font-weight: bold;
+    font-size: 16px;
+    text-align: center;
+}
+
+.gauge table {
+    text-align: center;
+}
+
+.gauge table div[dir="ltr"] {
+    width: initial !important;
+    background: #FFF;
+}
+
+svg {
+    background: #FFF !important;
+}
+
+ {
+    margin-top: 10px;
+    margin-left: -60px;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.configuration-container {
+    border: 1px solid #000;
+    overflow: hidden;
+    margin-top: 6px;
+}
+
+.configuration-container h4 {
+    background: #009DCA;
+    padding: 10px;
+    font-size: 18px;
+    color: #FFF;
+    font-family: Calibri;
+    text-shadow: 0.1em 0.1em 0.2em #000;
+    letter-spacing: 2px;
+    cursor: pointer;
+}
+
+fieldset {
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+fieldset legend {
+    font-size: 20px;
+    font-weight: bold;
+
+}
+
+.statistics-operation-section {
+    overflow: hidden;
+    margin-bottom: 25px;
+}
+
+.statistics-filterInput-section {
+    float: left;
+    width: 500px;
+}
+
+.statistics-counter-section {
+    float: left;
+    width: 660px;
+    margin-left: 60px;
+}
+
+.statistics-counter-section table tr td {
+    border: 0px !important;
+}
+
+.counter-data {
+    color: #FC0E18;
+}
+
+.statistics-counter-section-left {
+    width: 325px;
+    float: left;
+    margin-right: 5px;
+}
+
+.statistics-counter-section-right {
+    width: 325px;
+    float: left;
+}
+
+.statistics-filterInput-description-field {
+    line-height: 33px;
+}
+
+.statistics-filterInput-description-field input[type="submit"] {
+    float: right;
+    margin-right: 55px;
+}
+
+.statistics-filterInput-description-field label {
+    min-width: 116px;
+    display: inline-block;
+    margin-right: 60px;
+}
+
+.statistics-filterInput-description-field  select {
+    width: 160px;
+}
+
+.statistics-operation-section h4 {
+    margin-bottom: 10px;
+}
+
+.prefix-condition {
+    margin-left: 16px;
+    width: 344px;
+    color: red;
+    float: left;
+}
+
+.file-condition {
+    width: 225px;
+    float: left;
+    color: red;
+}
+
+.ui-custom-button {
+    padding: 5px 20px !important;
+    background: rgb(16, 127, 177) !important;
+    cursor: pointer !important;
+    border: 1px solid #000 !important;
+    text-shadow: 0.1em 0.1em 0.2em #000 !important;
+    color: #FFF !important;
+    font-weight: bold !important;
+    background-size: 1px 30px !important;
+    border-radius: 2px !important;
+    box-shadow: 2px 2px 5px #000 !important;
+    font-size: 14px !important;
+    opacity: 1 !important;
+}
+
+.ui-custom-button:hover {
+    background: rgb(49, 116, 146) !important;
+}
+
+#numbers-container {
+    width: 250px;
+    margin-left: 10px;
+    float: left;
+}
+
+#numbers-container input {
+    margin-bottom: 5px;
+}
+
+#test-campaign-element {
+    float: left;
+}
+
+.highlight-started-campaign {
+    background-color: rgb(243, 203, 203) !important;
+    font-weight: bold;
+}
+
+.pie-chart-container table {
+    width: initial !important;
+}
+
+.pie-chart-container table td {
+    border: none !important;
+    background: none !important;
+}
+
+.tooltip {
+    position: absolute;
+    width: 70px;
+    min-height: 20px;
+    line-height: 20px;
+    padding: 3px;
+    font-size: 14px;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    background: rgb(0, 130, 179);
+    border: 4px solid rgb(255, 255, 255);
+    border-radius: 5px;
+    text-shadow: rgba(0, 0, 0, 0.0980392) 1px 1px 1px;
+    box-shadow: rgba(0, 0, 0, .7) 1px 1px 5px 1px;
+    z-index: 1;
+}
+
+.pie-chart-container {
+    width: 418px;
+    float: left;
+    position: relative;
+}
+
+.pie-chart-container table {
+    width: initial;
+}
+
+.hide-dashboard {
+    width: 1381px;
+    height: 567px;
+    position: absolute;
+    background: #FFF;
+    opacity: 0.4;
+}
+
+.username {
+    margin-right: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    color: rgb(0, 130, 179);
+}
+
+.change-language {
+    float: right;
+}
+
+.time {
+    position: absolute;
+    font-weight: bold;
+    color: rgb(0, 130, 179);
+    width: 109px;
+    left: 0;
+    top: 46;
+    right: 0;
+    height: 20px;
+    margin: auto;
+    overflow: hidden;
+}
+
+.campaign-name {
+    display: inline-block;
+    width: 100px;
+    white-space: nowrap;
+    overflow: hidden !important;
+    text-overflow: ellipsis;
+}
+
+.no-access {
+    font-size: 18px;
+    font-weight: bold;
+    border: 1px solid red;
+    width: 700px;
+    padding: 20px;
+    line-height: 30px;
+    margin: 0 auto;
+    margin-top: 100px;
+    text-align: center;
+    color: #9F6000;
+}
+
+.configuration-section {
+    padding: 10px;
+}
+
+.upload-file {
+    float: right;
+}
+
+fieldset .form-field {
+    margin: 10px;
+    width: 650px;
+    float: left;
+}
+
+.form-checkbox{
+    display: inline-block;
+    margin-right: 10px;
+}
+
+fieldset .form-field label {
+    display: inline-block;
+    margin-right: 20px;
+    width: initial;
+}
+
+fieldset {
+    border: solid 1px rgb(49, 116, 146)
+}
+
+.google-chart-container {
+    border: 1px solid #000;
+    overflow: hidden;
+    margin-top: 6px;
+}
+
+#line-chart-container .google-chart-section{
+    margin-left: -25px;
+}
+
+.google-chart-container h4 {
+    background: #009DCA;
+    padding: 10px;
+    font-size: 18px;
+    color: #FFF;
+    font-family: Calibri;
+    text-shadow: 0.1em 0.1em 0.2em #000;
+    letter-spacing: 2px;
+    cursor: pointer;
+}
+
+.google-chart-container h5 {
+    margin: 10px 0px 0 20px;
+    font-size: 15px;
+}
+
+.operation-section {
+    overflow: hidden;
+    margin-bottom: 25px;
+}
+
+.filterInput-section {
+    float: left;
+    width: 500px;
+}
+
+.filterInput-description-field {
+    line-height: 33px;
+}
+
+.filterInput-description-field label {
+    width: 36px;
+    display: inline-block;
+    margin-right: 75px;
+    text-align: right;
+}
+
+.filterInput-description-field input[type="submit"] {
+    float: right;
+    margin-right: 55px;
+}
+
+.data-section {
+    float: right;
+    width: 660px;
+    margin-left: 60px;
+    margin-top: 50;
+}
+
+.counter-data {
+    color: #FC0E18;
+}
+
+table.report-filter > tbody > tr > td:first-child {
+    text-align: right;
+    padding: 4px;
+}
+
+table.report-filter {
+    width: 249px;
+}
+
+table.report-filter th {
+    text-align: left;
+}
+
+table.report-filter tr {
+    line-height: 27px;
+}
+
+.ui-widget .ui-widget {
+    margin: 0px 10px;
+}
+
+#beep-counts-hourly-average tbody td {
+
+}
+
+#beep-counts-hourly-average tbody tr:last-child td {
+    border-bottom: solid 1px rgb(49, 116, 146) !important;
+}
+
+-section {
+    float: left;
+    margin-left: -16px;
+}
+
+.column-chart-section {
+    float: left;
+    margin-left: 4px;
+}
+
+input[type='submit'][disabled='disabled'] {
+    background: #CCC;
+    color: #FFF;
+    cursor: default;
+}
+
+img {
+    border: none;
+}
+
+input[type="file"] {
+    height: 22px;
+}
+
+
+
+ .jqplot-data-label {
+    color: #FFF;
+}
+
+ .jqplot-table-legend-swatch{
+    width: 10px;
+}
+
+ table.jqplot-table-legend{
+    width: 100px;
+}
+
+.interface-body-container  table.jqplot-table-legend{
+    width: 100px !important;
+    border: none !important;
+    left: 231px !important;
+    top: 24px !important;
+}
+
+.interface-body-container  table tr.jqplot-table-legend{
+    background-color: #fff !important;
+}
+.interface-body-container  table.jqplot-table-legend tbody td
+{
+    border:none !important;
+}
+
+.interface-body-container  table.jqplot-table-legend tbody td.jqplot-table-legend-label{
+
+    text-anchor: start !important;
+    font-family: Arial !important;
+    font-size: 11px !important;
+    stroke: none !important;
+    stroke-width: 0px !important;
+    color: black !important;
+    white-space: nowrap !important;
+}
+
+.line-chart-section{
+    float: left;
+}
+
+.line-chart-section:first-child{
+   /* margin-right: 95px;*/
+}
+
+.line-chart table.jqplot-table-legend,.line-chart-section table.jqplot-table-legend{
+    top: -12px !important;
+    left: 15px !important;
+}
+
+div.jqplot-table-legend-swatch-outline{
+    border:none !important;
+}
+
+.div-separator{
+    margin: 20px 0;
+}
+
+.pie-chart-section{
+margin-right: 175px;
+}
+
+.pie-chart-section:last-child{
+    margin-right: 0;
+}
+
+.pie-tooltip{
+    font-size: 11px;
+    background-color: #FFF;
+    border: 1px solid #Ddd;
+    padding: 5px 10px;
+    box-shadow: 0px 1px 6px #000;
+    white-space: nowrap;
+}
+.line-chart div.jqplot-title,.line-chart-section div.jqplot-title{
+    top: -30px !important;
+}
+
+.line-chart {
+    margin-left: -37px;
+}

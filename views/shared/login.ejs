@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Login : Web Advertisement</title>
+    <link rel="shortcut icon" type="image/png" href="/favicon.ico"/>
+    <link rel="stylesheet" href="/styles/style.default.css" type="text/css"/>
+    <script type="text/javascript" src="/scripts/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="/scripts/Shared.js"></script>
+    <script type="text/javascript" src="/scripts/jquery-migrate-1.1.1.min.js"></script>
+    <script type="text/javascript" src="/scripts/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/scripts/Shared.js"></script>
+
+</head>
+
+<body class="loginbody">
+<div class="loginwrapper">
+
+    <div class="loginwrap zindex100 animate2 bounceInDown">
+        <h1 class="logintitle"><span class="iconfa-lock"></span> <%=language.interface_lookup.sign_in%> <span class="subtitle"><%=language.interface_lookup.unifun_web_advertisement%></span>
+        </h1>
+        <div class="loginwrapperinner">
+            <form action="#" method="post" id="FormChangeLanguage" name="FormChangeLanguage" class="pull-right">
+                <span style="color: #FFF;font-weight: bold;"><%=language.interface_lookup.language%></span>
+                <select id="inputLanguage" name="inputLanguage"
+                        onchange=" return changeLanguage($(this).val(), '/*base url*/');" class="animate4 bounceIn "
+                        style="width: 60px">
+                    <option value="russian" <% if(language.selected == "russian"){%>selected <%}%> >Ru</option>
+                    <option value="english" <% if(language.selected == "english"){%>selected <%}%> >En</option>
+                </select>
+                <input type="hidden" name="redirectUrl" value="">
+            </form>
+
+            <div class="clearfix clearSpace"></div>
+
+            <form id="loginform" action="<%= view_params.site_url %>login/createUserSession" method="POST">
+
+                <p class="animate4 bounceIn">
+                    <input type="text" name="Username" id="Username" placeholder="<%=language.interface_lookup.username%>" value="" autofocus="">
+                </p>
+
+
+                <p class="animate5 bounceIn">
+                    <input type="password" name="Password" id="Password" placeholder="<%=language.interface_lookup.password%>" value="">
+                </p>
+
+                <input type="hidden" name="LoginSubmit" value="Login">
+
+                <p class="animate6 bounceIn">
+                    <button class="btn btn-default btn-block"><%=language.interface_lookup.login%></button>
+                </p>
+
+
+
+            </form>
+
+        </div>
+        <!--loginwrapperinner-->
+    </div>
+    <div class="loginshadow animate3 fadeInUp"></div>
+</div>
+
+
+<script type="text/javascript">
+    //jQuery.noConflict();
+
+    jQuery(document).ready(function () {
+
+        //add csrf token
+
+        $('form').append("<input type='hidden' name='csrf_token' value=<%= csrf_token %>>")
+
+        var anievent = (jQuery.browser.webkit) ? 'webkitAnimationEnd' : 'animationend';
+        jQuery('.loginwrap').bind(anievent, function () {
+            jQuery(this).removeClass('animate2 bounceInDown');
+        });
+
+        jQuery('#Username,#Password').focus(function () {
+            if (jQuery(this).hasClass('error')) jQuery(this).removeClass('error');
+        });
+
+        jQuery('#loginform button').click(function () {
+            if (!jQuery.browser.msie) {
+                if (jQuery('#Username').val() == '' || jQuery('#Password').val() == '') {
+                    if (jQuery('#Username').val() == '') jQuery('#Username').addClass('error'); else jQuery('#Username').removeClass('error');
+                    if (jQuery('#Password').val() == '') jQuery('#Password').addClass('error'); else jQuery('#Password').removeClass('error');
+                    jQuery('.loginwrap').addClass('animate0 wobble').bind(anievent, function () {
+                        jQuery(this).removeClass('animate0 wobble');
+                    });
+                } else {
+                    jQuery('#loginform').submit();
+                }
+                return false;
+            }
+        });
+    });
+
+</script>
+</body>
+</html>

@@ -1,0 +1,228 @@
+
+<!DOCTYPE html>
+<head>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Web Advertisement Interface</title>
+
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/styles/style.default.css" type="text/css"/>
+    <link rel="stylesheet" href="/prettify/prettify.css" type="text/css"/>
+    <link rel="stylesheet" href="/styles/validationEngine.jquery.css" type="text/css"/>
+    <link rel="stylesheet" href="/styles/font-awesome.css" type="text/css"/>
+    <link rel="stylesheet" href="/styles/jquery.Jcrop.css" type="text/css"/>
+    <link rel="stylesheet" href="/styles/jquery.minicolors.css" type="text/css"/>
+    <link rel="stylesheet" href="/styles/bootstrap-datetimepicker.min.css" type="text/css"/>
+    <script type="text/javascript" src="/scripts/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="/scripts/jquery.cookie.js"></script>
+
+    <script type="text/javascript">
+        /*
+         * Javascript Language Constants
+         * */
+        var BASE_URL = '';
+
+        var editConfirmationText = 'Are you sure you want to edit?';
+        var editConfirmationYes = 'Yes';
+        var editConfirmationNo = 'No';
+        var SelectAllLang = 'Select All';
+        var SelectionTextLang = 'Select';
+        var AllSelectedLang = 'All Selected';
+        var Time = '';
+
+        var previous = 'Previous';
+        var next = 'Next';
+
+        var Language;
+        Language = $.cookie("webinterfacelanguagecookie") == null ? "Russian" : $.cookie("webinterfacelanguagecookie");
+        var today = 'Go to today',
+                clear = 'Clear selection',
+                close = 'Close the picker',
+                selectMonth = '<?php echo $Language->translate("Select Month") ?>',
+                prevMonth = 'Previous Month',
+                nextMonth = 'Next Month',
+                selectYear = 'Select Year',
+                prevYear = 'Previous Year',
+                nextYear = 'Next Year',
+                selectDecade = 'Select Decade',
+                prevDecade = 'Previous Decade',
+                nextDecade = 'Next Decade',
+                prevCentury = 'Previous Century',
+                nextCentury = 'Next Century';
+        var msisdnGloabl = "237-";
+
+        var ourlastMonth = '<?php echo  $Language->translate("Last Month") ?>';
+
+
+    </script>
+    <script type="text/javascript" src="/scripts/moment.js"></script>
+
+
+    <!--[if lte IE 8]>
+    <script type="text/javascript" src="/scripts/customIe.js" type="text/css"></script>
+    <script type="text/javascript" src="/scripts/excanvas.js" type="text/css"></script>
+    <link rel="stylesheet" href="/styles/style-ie.css" type="text/css"/>
+    <![endif]-->
+    <script type="text/javascript" src="/scripts/jquery-ui-1.10.3.js"></script>
+    <script type="text/javascript" src="/scripts/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/scripts/ajaxGrid.js"></script>
+    <script type="text/javascript" src="/scripts/jquery.ui.timepicker.js"></script>
+    <script type="text/javascript" src="/scripts/dateTimepicker.js"></script>
+    <script type="text/javascript" src="/scripts/jquery.validationEngine.js"></script>
+    <script type="text/javascript" src="/scripts/multi-select.js"></script>
+
+    <script src="/scripts/moment-with-locales.js"></script>
+
+    <script type="text/javascript" src="/scripts/jquery.validationEngine-en.js"></script>
+
+
+    <script type="text/javascript" src="/scripts/validation.js"></script>
+    <script type="text/javascript" src="/scripts/jquery.minicolors.min.js"></script>
+    <script type="text/javascript"
+            src="/scripts/bootstrap-datetimepicker.custom.min.js"></script>
+
+    <script type="text/javascript" src="/prettify/prettify.js"></script>
+    <script type="text/javascript" src="/scripts/custom.js"></script>
+    <script type="text/javascript" src="/scripts/jquery.dataTables.min.js"></script>
+
+
+    <script type="text/javascript" src="/scripts/json2.js"></script>
+
+
+    <script type="text/javascript" src="/scripts/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="/scripts/jquery.flot.min.js"></script>
+    <script type="text/javascript" src="/scripts/jquery.flot.resize.min.js"></script>
+    <script type="text/javascript" src="/scripts/jquery.flot.time.min.js"></script>
+    <script type="text/javascript" src="/scripts/jquery.flot.categories.js"></script>
+    <script type="text/javascript" src="/scripts/jquery.flot.navigate.js"></script>
+
+
+    <script type="text/javascript" src="/scripts/Shared.js"></script>
+
+    <script type="text/javascript" src="/scripts/event-calendar.js"></script>
+    <script type="text/javascript" src="/scripts/broadcasting-calendar.js"></script>
+    <script type="text/javascript" src="/scripts/sliderTimePicker.js"></script>
+    <script type="text/javascript" src="/scripts/bootstrap-filestyle.min.js"></script>
+    <script src="/scripts/jquery.Jcrop.js"></script>
+    <script src="/scripts/chart.js"></script>
+    <script src="/scripts/line.js"></script>
+    <script src="/scripts/CSVForm.js"></script>
+
+    <script>
+        $(':file').filestyle();
+        $(document).ready(function () {
+//            $(".footer").css();
+        });
+    </script>
+</head>
+<body>
+
+<div class="mainwrapper fullwrapper">
+
+    <!-- START OF LEFT PANEL -->
+    <div class="leftpanel">
+
+        <div class="logopanel">
+            <h1><a> Web Advertisement </a> </h1>
+
+        </div>
+        <!--logopanel-->
+
+        <div class="datewidget"> Web Advertisement+ <small style="color:white">v1.0</small></div>
+
+        <div class="leftmenu">
+            <ul class="nav nav-tabs nav-stacked">
+
+                <li id="menu-UserManagement">
+                    <a href="/users">
+                        <span class="icon glyphicon glyphicon-star"></span>
+                        Users
+                    </a>
+                </li>
+
+
+
+            </ul>
+        </div>
+        <!--leftmenu-->
+
+    </div>
+    <!--mainleft-->
+    <!-- END OF LEFT PANEL -->
+
+    <!-- START OF RIGHT PANEL -->
+    <div class="rightpanel">
+        <div class="headerpanel">
+
+            <a href="" class="showmenu"></a>
+
+            <div class="headerright">
+                <div class="change-language form-inline" style="display:inline-block">
+                    <form action="" method="post" id="FormChangeLanguage" name="FormChangeLanguage" class="pull-right">
+                        <span style="color: #FFF;font-weight: bold;">Language:</span>
+                        <select id="inputLanguage" name="inputLanguage"
+                                onchange=" return changeLanguage($(this).val(), '/');"
+                                class="animate4 bounceIn form-control form-control-ie"
+                                style="width:auto;display: inline-block;">
+
+                            <option value="Russian">Ru</option>
+                            <option value="English">En</option>
+                            <option value="French">Fr</option>
+
+
+                        </select>
+                        <input type="hidden" name="redirectUrl" value="">
+                    </form>
+                </div>
+
+                <div class="dropdown userinfo" style="vertical-align: top;margin-right: 5px">
+                    <a class="dropdown-toggle" data-toggle="dropdown" data-target="#"
+                       href="/page.html">Setting
+                        <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+
+                        <li>
+                            <a onclick="showAddNewForm('Change Password','/ChangePassword/Form',400,250);return false;"    href=""><span class="icon-edit"></span>Change Password</a>
+                        </li>
+
+                        <li class="divider"></li>
+
+                        <li><a href="/LogOut"><span
+                                        class="icon-off"></span>Sign Out</a></li>
+                    </ul>
+                </div>
+                <!--dropdown-->
+
+            </div>
+
+            <!--headerright-->
+
+        </div>
+        <!--headerpanel-->
+        <div class="breadcrumbwidget">
+            <ul class="breadcrumb" style="position: relative;">
+
+                <li class="ServerClock">
+                    <strong>Time : </strong><span id="ServerClockTime"></span>
+                    <script>
+                        $(function(){
+                            var TimeJs = moment(Time);
+
+                            setInterval(function(){
+                                $("#ServerClockTime").html(TimeJs.add(1, 's').format(" hh:mm:ss a"));
+                            }, 1000);
+                        });
+                    </script>
+                </li>
+            </ul>
+        </div>
+        <!--breadcrumbwidget-->
+        <div class="pagetitle">
+            <h1 class="page-title"><%= page_title %></h1>
+
+            <div class="pull-right server-title"><%= page_title %></div>
+        </div>
+        <!--pagetitle-->
+

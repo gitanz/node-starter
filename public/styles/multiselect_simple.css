@@ -1,0 +1,123 @@
+.multi-select-simple{
+    height:32px;
+}
+.hide-this-element {
+     border: 0;
+     clip: rect(0 0 0 0);
+     height: 1px;
+     margin: -1px;
+     overflow: hidden;
+     padding: 0;
+     position: absolute !important;
+     width: 1px;
+}
+li{
+    list-style: none;
+}
+input.search-text-field{
+    position: relative;
+    top: -5px;
+    border: 1px solid #FFF;
+    width: 12px;
+    margin:0;
+}
+.selected-items{
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    line-height: 18px;
+    max-width: 190px;
+    overflow: hidden;
+    height: 22px;
+}
+.selected-items li{
+    display:inline-block;
+}
+ul.selected-items.placeholder{
+    width: auto;
+    text-align: left;
+    padding-top: 6px;
+    padding-left: 6px;
+}
+.search-div{
+    display: inline-block;
+    width: 230px;
+    height: 34px;
+    border: 1px solid #CCC;
+    overflow-x: hidden;
+    background-color: #FFF;
+}
+.multi-select-dropdown{
+    display: none;
+    border: 1px solid #CCC;
+    position: absolute;
+    top: 34px;
+    border-top: none;
+    z-index: 1000;
+    width: 229px;
+    background-color: #FFF;
+}
+.multi-select-ul{
+    list-style:none;
+    margin:0;
+    padding:2px;
+    height:203px;
+    overflow-y:scroll;
+    clear: both;
+}
+.multi-select-ul li{
+    margin: 0;
+    padding: 6px;
+}
+.multi-select-ul li:hover{
+    background: #5897fb;
+    color:#FFF;
+}
+.multi-select-ul li.selectable-li.active{
+    background: #CCCCCC;
+    color:#000;
+}
+li.selection-tokens {
+    background: #e4e4e4;
+    padding: 0px 5px;
+    line-height:18px;
+    margin: 2px;
+    border: 1px solid #CCC;
+    border-radius: 2px;
+    color:#666;
+}
+li.selection-tokens span.remove-selection{
+    cursor:default;
+}
+li.selection-tokens span.remove-selection:hover{
+    text-shadow: 1px 0px 0px #999;
+}
+.utilDiv{
+    border-top: 1px solid #ccc;
+}
+.utilDiv > button{
+    margin:5px;
+}
+.utilDiv > button:first-child{
+    float:left;
+}
+.utilDiv > button:nth-child(2){
+    float:right;
+}
+.search-text-field:focus{
+    border:0px solid #FFF;
+    box-shadow: 0px 0px 0px #FFF !important;
+    -moz-box-shadow: 0px 0px 0px #FFF !important;
+    -webkit-box-shadow: 0px 0px 0px #FFF !important;
+    border-radius: none;
+}
+.search-div.focus{
+    -moz-box-shadow: 0 0 5px rgba(103, 173, 245, 0.5);
+    -webkit-box-shadow: 0 0 5px rgba(103, 173, 245, 0.5);
+    box-shadow: 0 0 5px rgba(103, 173, 245, 0.5);
+    -moz-border-radius: 0;
+    -webkit-border-radius: 0;
+    border-radius: 2px;
+    border-color: #5c9fe4;
+    background: #fff;
+}

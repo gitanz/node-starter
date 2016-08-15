@@ -1,0 +1,44 @@
+.form-inline-ie .form-control-ie{
+    display:inline-block;
+    width:auto
+}
+
+.form-inline-ie div.form-group{
+    display:inline-block;
+    width:auto
+}
+.form-inline-ie div.form-group:nth-child(even){
+    margin-right:25px;
+}
+
+#filestyle-0{
+    z-index: -9;
+}
+.teaserLabel{
+    visibility: visible !important;
+}
+#reportrange{
+    padding:0;
+    width:auto;
+}
+#DateRange{
+
+}
+#clearBtn{
+    padding:0;
+    width:auto;
+}
+
+.event-calendar-container .legend-section {
+    margin-left: 45px;
+}
+
+.col-ie8-sm-9{
+    width:75%;
+}
+[type="checkbox"]{
+    margin-right:2px !important;
+}
+input[type="text"]:not(.form-control){
+    padding:2px;
+}
